@@ -38,3 +38,26 @@ let person1:Person = {
 }
 
 let person2:Person ;
+
+//  interface
+
+interface PersonInterface {
+    name:string,
+    age:number,
+    isMarried?:boolean,
+    address:{
+        city:string,
+        state:string
+    },
+    friends:string[]
+}
+
+let person3:PersonInterface = {
+    name: 'John',
+    age: 30,
+    address:{
+        city:'Dhaka',
+        state:'Dhaka'
+    },
+    friends:[]
+}
