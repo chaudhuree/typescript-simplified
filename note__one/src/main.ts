@@ -13,3 +13,28 @@ let person:{name:string,age:number,isMarried?:boolean}={
     age: 30
 }
 person.isMarried = true;
+
+//  type
+
+type Person = {
+    name:string,
+    age:number,
+    isMarried?:boolean,
+    address:{
+        city:string,
+        state:string
+    },
+    friends:string[]
+}
+
+let person1:Person = {
+    name: 'John',
+    age: 30,
+    address:{
+        city:'Dhaka',
+        state:'Dhaka'
+    },
+    friends:[]
+}
+
+let person2:Person ;
