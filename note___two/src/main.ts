@@ -16,10 +16,10 @@ function fullName(firstName: string, lastName?: string): string {
 // Person({ name: "chaudhuree" });
 
 function Person(person: { name: string }) {
-  console.log(person.name) ;
+  console.log(person.name);
 }
 
-Person({ name: "chaudhuree",age: 20 });
+// Person({ name: "chaudhuree", age: 20 });
 
 // amra function er peramter dewar somoy kono extra property pass korte pari na
 // tahole seta error dekhabe
@@ -33,3 +33,26 @@ const obj = {
   age: 20,
 };
 Person(obj); // aita kono error throw korbe na jodio function a age nai but amra pass kore dilam
+
+// optional perameter
+function personExample(name:string, address?:{city:string}): void {
+
+    console.log(`${name}  ${address?.city}`);
+}
+
+personExample("chaudhuree",{city:"dhaka"})
+
+
+// default perameter value and optional perameter
+
+type Option={
+	age?:number,
+	isMarried?:boolean
+}
+function printNameAndAge(name:string,{age=27,isMarried}:Option={}){
+	console.log(name,age,isMarried)
+}
+// but at this point wile calling the function we have to give all the value
+printNameAndAge("sohan",{age:26,isMarried:false}); // no error
+printNameAndAge("sohan",{age:26}); // error
+// printNameAndAge("sohan",{isMarried:false}); // error
